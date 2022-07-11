@@ -13,11 +13,16 @@
 
     <h1>Reference Potential Calculator</h1>
 
-    <label for="upperBound">RHE</label><input id="rhe" class="inputFields"><br><br>
-    <label for="upperBound">SHE</label><input id="she" class="inputFields"><br><br>
-    <label for="lowerBound">SSC / Ag/AgCl</label><input id="ssc" class="inputFields"><br><br>
-    <label for="upperBound">vs. Li</label><input id="li" class="inputFields"><br><br>
-    <label for="upperBound">vs. Na</label><input id="na" class="inputFields"><br><br>
+    <input type="range" id="phSlide" value="70" min="0" max="140" oninput="phTxt.value = phSlide.value/10; calculate(0);">
+    <input id="phTxt" value="7" class="inputFields" oninput="calculate(0)"></input><br><br><br><br>
+
+    <label for="rhe">RHE</label><input id="rhe" class="inputFields" value= "0" oninput="calculate(1)">V<br><br>
+    <label for="she">SHE</label><input id="she" class="inputFields" oninput="calculate(2)">V<br><br>
+    <label for="ssc">SSC / Ag/AgCl</label><input id="ssc" class="inputFields" oninput="calculate(3)">V<br><br>
+    <label for="li">vs. Li</label><input id="li" class="inputFields" oninput="calculate(4)">V<br><br>
+    <label for="na">vs. Na</label><input id="na" class="inputFields" oninput="calculate(5)">V<br><br>
+
+    <script src="calculate.js"></script>
 </body>
 
 </html>
